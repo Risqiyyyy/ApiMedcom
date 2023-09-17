@@ -8,9 +8,10 @@ import {getSiswa ,
 
 const router = express.Router();
 
-// router.get('/me', Me);
+router.get('/getSiswa', getSiswa);
 router.post('/Createsiswa', createSiswa);
-// router.post('/register', Register);
-// router.delete('/logout', logOut);
+router.get('/getSiswaById/:id', getSiswaById);
+router.patch('/updateSiswa/:id', updateSiswa);
+router.delete('/deleteSiswa/:id', deleteSiswa);
 
 export default router;

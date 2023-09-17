@@ -1,17 +1,18 @@
 import express from "express";
 import {
-        // getSiswa , 
-        // getSiswaById ,
-        // createSiswa ,
-        // updateSiswa,
-        // deleteSiswa
+        getJurusan,
+        createJurusan ,
+        getJurusanById,
+        updateJurusan,
+        deleteJurusan
 } from "../controllers/Jurusan.js";
 
 const router = express.Router();
 
-// router.get('/me', Me);
-// router.post('/Createsiswa', createSiswa);
-// router.post('/register', Register);
-// router.delete('/logout', logOut);
+router.get('/getJurusan', getJurusan);
+router.post('/createJurusan', createJurusan);
+router.get('/getJurusanById/:id', getJurusanById);
+router.patch('/updateJurusan/:id', updateJurusan);
+router.delete('/deleteJurusan/:id', deleteJurusan);
 
 export default router;

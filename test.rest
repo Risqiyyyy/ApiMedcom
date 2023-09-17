@@ -40,3 +40,22 @@ Content-Type: application/json
    "email": "risqi@gmail.com",
     "password": "risqi312321321"
 }
+
+
+###
+GET http://localhost:5000/getJurusan
+
+###
+POST http://localhost:5000/createJurusan
+Content-Type: application/json
+
+{
+    "Nama_Jurusan": "RPL",
+    "Tingkatan": "VII"
+}
+
+###
+DELETE http://localhost:5000/deleteJurusan/4
+
+###
+GET http://localhost:5000/getJurusanById/4
