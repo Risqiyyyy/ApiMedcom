@@ -1,0 +1,42 @@
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "email": "risqi@gmail.com",
+    "password": "risqi312321321",
+    "confPassword": "risqi312321321",
+    "role": "siswa",
+    "NIS": "231313"
+}
+
+###
+POST http://localhost:5000/Createsiswa
+Content-Type: application/json
+
+{
+    "NIS": "231313",
+    "Nama_Lengkap": "maman",
+    "Tempat_Lahir": "Bandung",
+    "Tanggal_Lahir": "20-01-2003",
+    "Alamat": "Jl Mekarsari 1",
+    "Jenis_Kelamin": "Laki Laki",
+    "Agama": "Islam"
+}
+
+###
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+   "email": "risqi@gmail.com",
+    "password": "risqi312321321"
+}
