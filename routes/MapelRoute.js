@@ -1,17 +1,18 @@
 import express from "express";
 import {
-        // getSiswa , 
-        // getSiswaById ,
-        // createSiswa ,
-        // updateSiswa,
-        // deleteSiswa
+        getMapel , 
+        getMapelById ,
+        createMapel ,
+        updateMapel,
+        deleteMapel
 } from "../controllers/Mapel.js";
 
 const router = express.Router();
 
-// router.get('/me', Me);
-// router.post('/Createsiswa', createSiswa);
-// router.post('/register', Register);
-// router.delete('/logout', logOut);
+router.get('/getMapel', getMapel);
+router.post('/CreateMapel', createMapel);
+router.get('/getMapelById/:id', getMapelById);
+router.patch('/updateMapel/:id', updateMapel);
+router.delete('/deleteMapel/:id', deleteMapel);
 
 export default router;
