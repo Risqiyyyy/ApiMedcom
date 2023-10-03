@@ -47,6 +47,10 @@ app.use(JurusanRoute);
 app.use(MapelRoute);
 // store.sync();
 
+app.get('/', (req, res) => {
+    res.send('Hey this is my API running 🥳')
+  })
+
 app.listen(process.env.APP_PORT, ()=> {
     console.log('Server up and running...');
 });
