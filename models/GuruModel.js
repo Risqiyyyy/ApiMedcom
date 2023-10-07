@@ -22,5 +22,5 @@ const Guru = db.define('guru',{
 });
  
 Guru.belongsTo(Jurusan, { foreignKey: 'id_jurusan' });
-Nilai.belongsTo(Mapel, { foreignKey: 'id_mapel' });
+Guru.belongsTo(Mapel, { foreignKey: 'id_mapel' });
 export default Guru;
