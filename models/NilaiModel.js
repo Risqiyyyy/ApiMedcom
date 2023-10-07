@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
- 
+import Mapel from "./MapelModel.js";
+
 const { DataTypes } = Sequelize;
  
 const Nilai = db.define('nilai',{
@@ -23,4 +24,5 @@ const Nilai = db.define('nilai',{
         freezeTableName:true
     });
  
+    Nilai.belongsTo(Mapel, { foreignKey: 'id_mapel' });
 export default Nilai;
