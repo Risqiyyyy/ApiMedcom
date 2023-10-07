@@ -55,7 +55,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/deleteJurusan/4
+DELETE http://localhost:3300/deleteSiswa/4
 
 ###
-GET http://localhost:5000/getJurusanById/4
+GET http://localhost:3300/getJurusanById/4

@@ -73,20 +73,20 @@ export const updateSiswa = async(req, res) =>{
 };
 
 export const deleteSiswa = async(req, res) =>{
-    const siswa = await Siswa.findOne({
-        where: {
-            NIS: req.params.id
-        }
-    });
-    if(!siswa) return res.status(404).json({msg: "Siswa tidak ditemukan"});
     try {
-        await Siswa.destroy({
+        const siswa = await Siswa.findOne({
             where:{
-                NIS: siswa.NIS
+                NIS: req.params.id
             }
         });
-        res.status(200).json({msg: "Siswa Deleted"});
+        if(!siswa) return res.status(404).json({msg: "Data tidak ditemukan"});
+            await Siswa.destroy({
+                where:{
+                    NIS: siswa.NIS
+                }
+            });
+        res.status(200).json({msg: "SISWA deleted successfuly"});
     } catch (error) {
-        res.status(400).json({msg: error.message});
+        res.status(500).json({msg: error.message});
     }
 }
