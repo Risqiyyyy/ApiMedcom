@@ -80,7 +80,7 @@ export const deleteSiswa = async(req, res) =>{
     });
     if(!siswa) return res.status(404).json({msg: "Siswa tidak ditemukan"});
     try {
-        await User.destroy({
+        await Siswa.destroy({
             where:{
                 NIS: siswa.NIS
             }
