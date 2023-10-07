@@ -73,7 +73,7 @@ export const updateSiswa = async(req, res) =>{
 };
 
 export const deleteSiswa = async(req, res) =>{
-    const siswa = await User.findOne({
+    const siswa = await Siswa.findOne({
         where: {
             NIS: req.params.id
         }
